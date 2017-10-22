@@ -3,6 +3,12 @@ var webpackConfig = require('../../webpack.config');
 var webpack = require('webpack');
 
 var compiler = webpack(webpackConfig);
+// Adding keystone API
+var keystone = require('keystone');
+var importRoutes = keystone.importer(__dirname);
+var routes = {
+	api: importRoutes('./api'),
+};
 
 
 exports = module.exports = function (app) {
@@ -12,6 +18,7 @@ exports = module.exports = function (app) {
 	app.use(webpackHotReload(compiler, {
 		reload: true,
 	}));
+	app.get('/api/characters/', keystone.middleware.api, routes.api.characters.list);
 	app.get('/', function (req, res) {
 		function renderFullPage () {
 			return `
