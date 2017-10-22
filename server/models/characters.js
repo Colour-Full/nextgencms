@@ -35,10 +35,6 @@ Character.add({
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
 	},
-	specialSkills: {
-		fight: { type: Types.Html, wysiwyg: true, height: 150 },
-		shoot: { type: Types.Html, wysiwyg: true, height: 400 },
-	},
 });
 
 Character.defaultColumns = 'name, state|20%, author, publishedAt|15%';

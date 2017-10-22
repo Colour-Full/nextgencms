@@ -6,10 +6,10 @@ const App = class HelloMessage extends React.Component {
 	render () {
 		return (
 			<div className="row">
-				<div className="col s12 m12">
+				<div className="col s12 m4">
 					<div className="card">
 						<div className="card-image">
-							<img src="/server/public/img/jon-snow.jpg"/>
+							<img src="Josephus_Aloisus_Miller.jpg"/>
 							<span className="card-title">Card Title</span>
 							<a className="btn-floating halfway-fab waves-effect waves-light red">
 								<i className="material-icons">add</i>
