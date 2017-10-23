@@ -7,6 +7,7 @@ keystone.init({
 		'./server/public/js/',
 		'./server/public/scss/js/bin/',
 		'./server/public/img/',
+		'./server/public/scss/sass/',
 	],
 
 	'auto update': true,

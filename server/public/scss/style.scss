@@ -39,3 +39,11 @@
 @import "sass/components/date_picker/default";
 @import "sass/components/date_picker/default.date";
 @import "sass/components/date_picker/default.time";
+
+html { 
+  background: url("expanse_bg.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

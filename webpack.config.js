@@ -11,7 +11,7 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, '/server/public/js/'),
 		filename: 'bundle.js',
-		publicPath: '/server/public/img/',
+		publicPath: '/server/public/',
 	},
 	module: {
 		rules: [
@@ -32,30 +32,10 @@ module.exports = {
 				test: /\.scss$/,
 				use: [
 					'style-loader',
-					'css-loader',
+					'css-loader?-url',
 					'sass-loader',
 				],
 			},
-			{
-				test: /\.(png|jpg|gif)$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name: '[path][name].[ext]',
-						},
-					},
-				],
-			},
-			// {
-			// 	test: /\.(woff|woff2)$/,
-			// 	use: [
-			// 		{
-			// 			loader: 'url-loader',
-			// 			options: {},
-			// 		},
-			// 	],
-			// },
 		],
 	},
 	plugins: [
