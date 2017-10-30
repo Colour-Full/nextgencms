@@ -4,8 +4,12 @@
   "private": true,
   "dependencies": {
     "keystone": "latest",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.0",
+    "react-redux": "^5.0.6",
+    "react-transition-group": "^1.2.1",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "underscore": "latest"
   },
   "engines": {
@@ -17,6 +21,7 @@
     "build": "webpack"
   },
   "devDependencies": {
+    "axios": "^0.17.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -31,7 +36,9 @@
     "eslint-plugin-react": "^6.6.0",
     "file-loader": "^1.1.5",
     "jsx": "^0.9.89",
+    "lodash": "^4.17.4",
     "node-sass": "^4.5.3",
+    "redux-logger": "^3.0.6",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "webpack": "^3.8.1",

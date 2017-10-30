@@ -47,3 +47,14 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.fadeIn-enter {
+	margin-top: 50px;
+	opacity: 0;
+}
+
+.fadeIn-enter-active {
+	transition: opacity 0.5s, margin-top 1s;
+	margin-top: 0px;
+	opacity: 1;
+}

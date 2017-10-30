@@ -18,7 +18,7 @@ exports = module.exports = function (app) {
 	app.use(webpackHotReload(compiler, {
 		reload: true,
 	}));
-	app.get('/apigit /characters/', keystone.middleware.api, routes.api.characters.list);
+	app.get('/api/characters/', keystone.middleware.api, routes.api.characters.list);
 	app.get('/', function (req, res) {
 		function renderFullPage () {
 			return `
