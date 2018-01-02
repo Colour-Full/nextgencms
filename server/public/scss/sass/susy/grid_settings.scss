@@ -1,0 +1,27 @@
+$susy: (
+  flow: ltr,
+  output: float,
+  math: fluid,
+  container: 75em,
+  container-position: center,
+  last-flow: to,
+  columns: 12,
+  gutters: .25,
+  gutter-position: split,
+  column-width: false,
+  global-box-sizing: border-box,
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+//* Makes border-box properties *//
+//@include border-box-sizing;
+
+$phone: max-width 25em;
+$tablet: 25em 50em;
+$breakpoint-no-query-fallbacks: true;

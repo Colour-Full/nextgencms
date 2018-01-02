@@ -30,7 +30,7 @@ exports = module.exports = function (app) {
 				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 			</head>
 			<body>
-				<div class="container"></div>
+				<div class="react-container"></div>
 				<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 				<script type="text/javascript" src="materialize.min.js"></script>
 				<script src="bundle.js"></script>
