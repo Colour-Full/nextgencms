@@ -17,9 +17,8 @@ class Characterslist extends Component {
 		this.openModal = this.openModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
 		this.createMarkup = this.createMarkup.bind(this);
-		// this.animateIntro = this.animateIntro.bind(this);
 		this.animateOutro = this.animateOutro.bind(this);
-		this.aniTest = this.aniTest.bind(this);
+		this.getCharacterSlug = this.getCharacterSlug.bind(this);
 		this.state = {
 			open: false,
 			character_slug: undefined,
@@ -51,7 +50,7 @@ class Characterslist extends Component {
 		});
 	}
 
-	aniTest (slug_arr) {
+	getCharacterSlug (slug_arr) {
 		this.setState({
 			open: true,
 			character_slug: slug_arr[2],
@@ -61,7 +60,7 @@ class Characterslist extends Component {
 		const slug = e.target.className;
 		const slug_arr = slug.split(' ');
 		this.animateOutro();
-		setTimeout(() => { this.aniTest(slug_arr); }, 500);
+		setTimeout(() => { this.getCharacterSlug(slug_arr); }, 500);
 	}
 
 	closeModal () {
@@ -104,7 +103,6 @@ class Characterslist extends Component {
 		});
 	}
 	render () {
-		console.log('**** IN' + this.state.in);
 		if (this.props.loading) {
 			return (
 				<FullWindowOverlay>
@@ -114,11 +112,10 @@ class Characterslist extends Component {
 		}
 		if (this.state.open) {
 			const character = this.props.characters[this.state.character_slug];
-			// const char_bio = this.createMarkup();
-			console.log('CHAR', this.createMarkup());
+			const img = character.image ? character.image.filename : 'There is no character image';
 			return (
 				<CharacterCard
-					img={character.image.filename}
+					img={img}
 					character_name={character.name}
 					character_bio={this.createMarkup()}
 					click={this.closeModal}

@@ -1,6 +1,6 @@
 # CMS Build Entirely On top of JavaScript Technologies Node.js / Express / MongoDB / React / Redux
 
-An example project for a content management system build on top of popular JS technologies. It's using KeystoneJs as CMS admin panel, Mongo as a database, React on the front end and Redux Flux implementation to manage state. The project use Webpack as a build tool.
+An example project for a content management system build on top of popular JS technologies. It's using KeystoneJs as CMS admin panel, Mongo as a database, React on the front end and Redux Flux implementation to manage state. The project use Webpack as a build tool and materializecss for styling
 
 In this example the CMS can hold some dummy user information and some movie or game character bio and picture.
 
@@ -44,6 +44,7 @@ This is not a production ready build and you should not deployed it in live serv
 * [KeystoneJS](http://keystonejs.com/)
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
+* [Redux](http://materializecss.com/)
 
 ## Authors
 

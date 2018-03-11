@@ -11,7 +11,7 @@ keystone.init({
 	],
 
 	'auto update': true,
-	'mongo': 'mongodb://localhost/my-project',
+	'mongo': 'mongodb://localhost/nextgencms',
 
 	'session': true,
 	'auth': true,
