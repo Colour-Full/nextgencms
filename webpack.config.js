@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 	// This will be the entry file for all of our React code
@@ -9,9 +10,9 @@ module.exports = {
 	],
 	// This will be where the final bundle file will be outputed
 	output: {
-		path: path.join(__dirname, '/server/public/js/'),
+		path: path.join(__dirname, '/server/public/'),
 		filename: 'bundle.js',
-		publicPath: '/server/public/',
+		publicPath: 'server/public/',
 	},
 	module: {
 		rules: [
@@ -24,6 +25,7 @@ module.exports = {
 						presets: [
 							'react',
 							'env',
+							'stage-2',
 						],
 					},
 				},
@@ -36,10 +38,18 @@ module.exports = {
 					'sass-loader',
 				],
 			},
+			// {
+			// 	test: /\.scss$/,
+			// 	use: ExtractTextPlugin.extract({
+			// 		fallback: 'style-loader',
+			// 		use: ['css-loader?-url', 'sass-loader'],
+			// 	}),
+			// },
 		],
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
+		// new ExtractTextPlugin('css/styles.css'),
 	],
 	resolve: {
 		extensions: ['.js', '.jsx', '.scss'],

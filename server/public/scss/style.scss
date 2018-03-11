@@ -40,10 +40,110 @@
 @import "sass/components/date_picker/default.date";
 @import "sass/components/date_picker/default.time";
 
+// Susy grid system
+@import "sass/susy/grid_settings";
+@import "node_modules/susy/sass/susy";
+
+// Breakpoint media queries 
+@import "node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+// Retina rules
+@import "sass/mixins/retina_rules";
+
 html { 
   background: url("expanse_bg.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.fadeIn-enter {
+	margin-top: 50px;
+	opacity: 0;
+}
+
+.fadeIn-enter-active {
+	transition: opacity 0.5s, margin-top 1s;
+	margin-top: 0px;
+	opacity: 1;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fadeIn-exit {
+	margin-top: 0px;
+	opacity: 1;
+}
+
+.fadeIn-exit.fadeIn-exit-active {
+	transition: opacity 0.5s, margin-top 1s;
+	margin-top: 50px;
+	opacity: 0.01;
+}
+
+.overlay {
+	display: block;
+	overflow: auto;
+	background-color: rgba(38, 44, 127, 0.5);
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+}
+
+.overlay-relative-container {
+	position: relative;
+}
+
+.overlay-absolute-container {
+	position: absolute;
+}
+
+.overlay-fixed-container {
+	position: fixed;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.vc-align {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.text-shadow {
+    text-shadow: 0px 1px rgb(1, 1, 78);
+}
+
+.button-close {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    z-index: 9999;
+}
+
+.card {
+	margin: 2rem 2rem 2rem 2rem;
+	border-radius: 25px;
+}
+
+.card .card-image img {
+	top: 0.5rem;
+	width: 95%;
+	margin: 0 auto;
+	border-radius: 25px;
+}
+
+.card .card-image .modal-image {
+	width: 50%;
 }

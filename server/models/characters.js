@@ -16,7 +16,6 @@ var charImgStorage = new keystone.Storage({
 
 var Character = new keystone.List('Character', {
 	autokey: { path: 'slug', from: 'name', unique: true },
-	map: { name: 'name' },
 	defaultSort: '-createdAt',
 });
 
