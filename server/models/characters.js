@@ -1,6 +1,5 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
-var path = require('path');
 
 var charImgStorage = new keystone.Storage({
 	adapter: keystone.Storage.Adapters.FS,

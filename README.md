@@ -44,7 +44,7 @@ This is not a production ready build and you should not deployed it in live serv
 * [KeystoneJS](http://keystonejs.com/)
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
-* [Redux](http://materializecss.com/)
+* [Materialize](http://materializecss.com/)
 
 ## Authors
 
