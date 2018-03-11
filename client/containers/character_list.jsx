@@ -104,7 +104,7 @@ class Characterslist extends Component {
 		});
 	}
 	render () {
-		console.log("**** IN" + this.state.in);
+		console.log('**** IN' + this.state.in);
 		if (this.props.loading) {
 			return (
 				<FullWindowOverlay>

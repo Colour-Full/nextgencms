@@ -4,3 +4,4 @@ node_modules
 *.svg
 *.gif
 *.png
+*.logs
